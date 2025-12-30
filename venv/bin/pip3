@@ -1,4 +1,4 @@
-#!/Users/satwiksahoo/Desktop/CodeBasics/LLMops/ecommerce_agent/ecom-prod-assistant/venv/bin/python3
+#!/Users/satwiksahoo/Desktop/CodeBasics/LLMops/ecommerce_agent/ecom-prod-assistant/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
