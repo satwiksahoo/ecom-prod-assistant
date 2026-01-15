@@ -1,15 +1,21 @@
+#model loader
 import os
 import sys
 import json
 from dotenv import load_dotenv
-from utils.config_loader import load_config
+# from utils.config_loader import load_config
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
-from logger import GLOBAL_LOGGER as log
-from exception.custom_exception import ProductAssistantException
+from langchain_openai import OpenAIEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
+# from logger import GLOBAL_LOGGER as log
+# from exception.custom_exception import ProductAssistantException
 import asyncio
 
+from prod_assistant.utils.config_loader import load_config
+from prod_assistant.logger import GLOBAL_LOGGER as log
+from prod_assistant.exception.custom_exception import ProductAssistantException
 
 class ApiKeyManager:
     def __init__(self):
@@ -44,27 +50,42 @@ class ModelLoader:
 
     
 
-    def load_embeddings(self):
-        """
-        Load and return embedding model from Google Generative AI.
-        """
+    # def load_embeddings(self):
+    #     """
+    #     Load and return embedding model from Google Generative AI.
+    #     """
+    #     try:
+    #         model_name = self.config["embedding_model"]["model_name"]
+    #         log.info("Loading embedding model", model=model_name)
+
+    #         # Patch: Ensure an event loop exists for gRPC aio
+    #         try:
+    #             asyncio.get_running_loop()
+    #         except RuntimeError:
+    #             asyncio.set_event_loop(asyncio.new_event_loop())
+
+    #         return GoogleGenerativeAIEmbeddings(
+    #             model=model_name,
+    #             google_api_key=self.api_key_mgr.get("GOOGLE_API_KEY")  # type: ignore
+    #         )
+    #     except Exception as e:
+    #         log.error("Error loading embedding model", error=str(e))
+    #         raise ProductAssistantException("Failed to load embedding model", sys)
+        
+        
+
+        
+    def load_embedding_model(self):
         try:
-            model_name = self.config["embedding_model"]["model_name"]
-            log.info("Loading embedding model", model=model_name)
-
-            # Patch: Ensure an event loop exists for gRPC aio
-            try:
-                asyncio.get_running_loop()
-            except RuntimeError:
-                asyncio.set_event_loop(asyncio.new_event_loop())
-
-            return GoogleGenerativeAIEmbeddings(
-                model=model_name,
-                google_api_key=self.api_key_mgr.get("GOOGLE_API_KEY")  # type: ignore
-            )
+            log.info("logading embedding model")
+            model_name = self.config['embedding_model']['model']
+            
+            return HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")         
+        
         except Exception as e:
-            log.error("Error loading embedding model", error=str(e))
-            raise ProductAssistantException("Failed to load embedding model", sys)
+            log.error("Error loading embedding model" , error = str(e))
+            raise ProductAssistantException("Failed to load embedding model" , sys)
+
 
 
     def load_llm(self):
@@ -117,7 +138,7 @@ if __name__ == "__main__":
     loader = ModelLoader()
 
     # Test Embedding
-    embeddings = loader.load_embeddings()
+    embeddings = loader.load_embedding_model()
     print(f"Embedding Model Loaded: {embeddings}")
     result = embeddings.embed_query("Hello, how are you?")
     print(f"Embedding Result: {result}")

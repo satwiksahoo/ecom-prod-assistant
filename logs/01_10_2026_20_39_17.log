@@ -1,0 +1,41 @@
+{"timestamp": "2026-01-10T15:09:17.484054Z", "level": "warning", "event": "OPENAI_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.484236Z", "level": "warning", "event": "GOOGLE_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.484272Z", "level": "warning", "event": "GROQ_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.484297Z", "level": "warning", "event": "ASTRA_DB_API_ENDPOINT is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.484319Z", "level": "warning", "event": "ASTRA_DB_APPLICATION_TOKEN is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.484342Z", "level": "warning", "event": "ASTRA_DB_KEYSPACE is missing from environment"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-01-10T15:09:17.486119Z", "level": "info", "event": "YAML config loaded"}
+{"timestamp": "2026-01-10T15:09:17.487038Z", "level": "warning", "event": "OPENAI_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.487072Z", "level": "warning", "event": "GOOGLE_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.487101Z", "level": "warning", "event": "GROQ_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.487124Z", "level": "warning", "event": "ASTRA_DB_API_ENDPOINT is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.487149Z", "level": "warning", "event": "ASTRA_DB_APPLICATION_TOKEN is missing from environment"}
+{"timestamp": "2026-01-10T15:09:17.487171Z", "level": "warning", "event": "ASTRA_DB_KEYSPACE is missing from environment"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-01-10T15:09:17.488257Z", "level": "info", "event": "YAML config loaded"}
+{"timestamp": "2026-01-10T15:09:17.490036Z", "level": "info", "event": "OPENAI_API_KEY loaded from environment"}
+{"timestamp": "2026-01-10T15:09:17.490069Z", "level": "info", "event": "GOOGLE_API_KEY loaded from environment"}
+{"timestamp": "2026-01-10T15:09:17.490094Z", "level": "info", "event": "GROQ_API_KEY loaded from environment"}
+{"timestamp": "2026-01-10T15:09:17.490118Z", "level": "info", "event": "ASTRA_DB_API_ENDPOINT loaded from environment"}
+{"timestamp": "2026-01-10T15:09:17.490139Z", "level": "info", "event": "ASTRA_DB_APPLICATION_TOKEN loaded from environment"}
+{"timestamp": "2026-01-10T15:09:17.490159Z", "level": "info", "event": "ASTRA_DB_KEYSPACE loaded from environment"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-01-10T15:09:17.491284Z", "level": "info", "event": "YAML config loaded"}
+{"provider": "openai", "model": "gpt-4o-mini", "timestamp": "2026-01-10T15:09:17.491351Z", "level": "info", "event": "Loading LLM"}
+{"timestamp": "2026-01-10T15:09:17.610846Z", "level": "info", "event": "logading embedding model"}
+Use pytorch device_name: mps
+Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+vector store default init, collection 'ecommercedata'
+No valid keyspace found in environment variable.
+Detecting API environment 'prod' from supplied endpoint
+createCollection('ecommercedata')
+HTTP Request: POST https://004cdff4-2b76-494f-8250-739fd5453ec9-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+finished createCollection('ecommercedata')
+cursor fetching a page: (empty page state) from ecommercedata
+HTTP Request: POST https://004cdff4-2b76-494f-8250-739fd5453ec9-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/ecommercedata "HTTP/1.1 200 OK"
+cursor finished fetching a page: (empty page state) from ecommercedata
+{"provider": "openai", "model": "gpt-4o-mini", "timestamp": "2026-01-10T15:09:27.631310Z", "level": "info", "event": "Loading LLM"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"provider": "openai", "model": "gpt-4o-mini", "timestamp": "2026-01-10T15:09:29.800867Z", "level": "info", "event": "Loading LLM"}
+{"timestamp": "2026-01-10T15:09:29.801761Z", "level": "info", "event": "logading embedding model"}
+Use pytorch device_name: mps
+Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

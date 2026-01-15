@@ -1,0 +1,33 @@
+{"timestamp": "2026-01-10T17:55:18.342921Z", "level": "warning", "event": "OPENAI_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.343106Z", "level": "warning", "event": "GOOGLE_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.343142Z", "level": "warning", "event": "GROQ_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.343171Z", "level": "warning", "event": "ASTRA_DB_API_ENDPOINT is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.343198Z", "level": "warning", "event": "ASTRA_DB_APPLICATION_TOKEN is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.343226Z", "level": "warning", "event": "ASTRA_DB_KEYSPACE is missing from environment"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-01-10T17:55:18.344890Z", "level": "info", "event": "YAML config loaded"}
+{"timestamp": "2026-01-10T17:55:18.344985Z", "level": "warning", "event": "OPENAI_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.345022Z", "level": "warning", "event": "GOOGLE_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.345052Z", "level": "warning", "event": "GROQ_API_KEY is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.345080Z", "level": "warning", "event": "ASTRA_DB_API_ENDPOINT is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.345107Z", "level": "warning", "event": "ASTRA_DB_APPLICATION_TOKEN is missing from environment"}
+{"timestamp": "2026-01-10T17:55:18.345131Z", "level": "warning", "event": "ASTRA_DB_KEYSPACE is missing from environment"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-01-10T17:55:18.346207Z", "level": "info", "event": "YAML config loaded"}
+{"timestamp": "2026-01-10T17:55:18.347958Z", "level": "info", "event": "logading embedding model"}
+Use pytorch device_name: mps
+Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+vector store default init, collection 'ecommercedata'
+No valid keyspace found in environment variable.
+Detecting API environment 'prod' from supplied endpoint
+createCollection('ecommercedata')
+HTTP Request: POST https://004cdff4-2b76-494f-8250-739fd5453ec9-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+finished createCollection('ecommercedata')
+cursor fetching a page: (empty page state) from ecommercedata
+HTTP Request: POST https://004cdff4-2b76-494f-8250-739fd5453ec9-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/ecommercedata "HTTP/1.1 200 OK"
+cursor finished fetching a page: (empty page state) from ecommercedata
+{"provider": "openai", "model": "gpt-4o-mini", "timestamp": "2026-01-10T17:55:31.771908Z", "level": "info", "event": "Loading LLM"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+{"provider": "openai", "model": "gpt-4o-mini", "timestamp": "2026-01-10T17:55:35.605368Z", "level": "info", "event": "Loading LLM"}
+{"timestamp": "2026-01-10T17:55:35.654983Z", "level": "info", "event": "logading embedding model"}
+Use pytorch device_name: mps
+Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

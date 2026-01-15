@@ -1,25 +1,63 @@
+# beautifulsoup4==4.13.5
+# fastapi==0.116.1
+# html5lib==1.1
+# jinja2==3.1.6
+# langchain==0.3.27
+# langchain-astradb==0.6.1
+# langchain_core==0.3.75
+# langchain-google-genai==2.1.8
+# langchain-groq==0.3.6
+# lxml==6.0.1
+# python-dotenv==1.1.1
+# python-multipart==0.0.20
+# selenium==4.35.0
+# streamlit==1.49.1
+# undetected-chromedriver==3.5.5
+# uvicorn==0.35.0
+# structlog==25.4.0
+# langgraph==0.6.7
+# ragas==0.3.4
+# langchain-mcp-adapters==0.1.10
+# mcp==1.14.0
+# ddgs==9.6.0
+# langchain-openai==0.3.32
+# langchain_community
+-e .
+
+
+# --- Web scraping & automation ---
 beautifulsoup4==4.13.5
-fastapi==0.116.1
-html5lib==1.1
-jinja2==3.1.6
-langchain==0.3.27
-langchain-astradb==0.6.1
-langchain_core==0.3.75
-langchain-google-genai==2.1.8
-langchain-groq==0.3.6
 lxml==6.0.1
-python-dotenv==1.1.1
-python-multipart==0.0.20
 selenium==4.35.0
-streamlit==1.49.1
-undetected-chromedriver==3.5.5
+undetected_chromedriver==3.5.5
+# undetected-chromedriver
+
+# --- Web app / API ---
+fastapi==0.116.1
 uvicorn==0.35.0
-structlog==25.4.0
+jinja2==3.1.6
+python-multipart==0.0.20
+python-dotenv==1.1.1
+
+# --- UI ---
+streamlit==1.49.1
+
+# --- LLM / RAG stack ---
+langchain==0.3.27
+langchain-core==0.3.75
+langchain-community
+langchain-openai
+langchain-groq==0.3.6
+langchain-google-genai==2.1.8
+langchain-astradb
+langchain-mcp-adapters==0.1.10
 langgraph==0.6.7
 ragas==0.3.4
-langchain-mcp-adapters==0.1.10
 mcp==1.14.0
+sentence-transformers
+
+# --- Utilities ---
 ddgs==9.6.0
-langchain-openai==0.3.32
-langchain_community
--e .
+structlog==25.4.0
+
+
