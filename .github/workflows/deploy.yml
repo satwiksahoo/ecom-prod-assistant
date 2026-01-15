@@ -112,8 +112,7 @@ jobs:
           REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
           IMAGE_TAG: ${{ steps.image-tag.outputs.tag }}
         run: |
-          kubectl set image deployment/product-assistant product-assistant=$REGISTRY/$REPOSITORY:$IMAGE_TAG
-
+          kubectl set image deployment/product-assistant product-assistant=$REGISTRY/$REPOSITORY:latest
 
       # Verify rollout
       - name: Verify Deployment
